@@ -28,5 +28,8 @@ public class UserSchoolEntity {
     @Column(name = "school_major")
     private String schoolMajor;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private UserEntity userEntity;
+
 }
 

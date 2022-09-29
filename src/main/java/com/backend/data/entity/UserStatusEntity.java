@@ -12,22 +12,25 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
 @Entity
-@Table(name = "tb_user_job")
+@Table(name = "tb_user_status")
 @EntityListeners(AuditingEntityListener.class)
-public class UserJobEntity {
+public class UserStatusEntity {
     @Id
     @Column(name = "user_id")
     private String userId;
 
-    @Column(name = "job_code")
-    private String jobCode;
+    @Column(name = "dept_code")
+    private String deptCd;
 
-    @Column(name = "ing_yn")
-    private String ingYn;
+    @Column(name = "dept_number")
+    private String deptNumber;
+
+    @Column(name = "dept_name")
+    private String deptName;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private UserEntity userEntity;
 
-
 }
+
 

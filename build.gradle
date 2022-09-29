@@ -1,9 +1,17 @@
+buildscript{
+    ext{
+        queryDslVersion="5.0.0"
+        mapstructVersion = "1.4.2.Final"
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.7.3'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
     id 'org.springframework.experimental.aot' version '0.12.1'
     id 'org.hibernate.orm'
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
 group = 'com'
@@ -23,6 +31,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -32,6 +41,14 @@ dependencies {
 
     // hikari - connection pool 보완 (enterprise 환경용)
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+    // QueryDSL
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+    // Mapstruct
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
 }
 
 tasks.named('test') {
@@ -42,3 +59,20 @@ tasks.named('bootBuildImage') {
     builder = 'paketobuildpacks/builder:tiny'
     environment = ['BP_NATIVE_IMAGE': 'true']
 }
+
+//querydsl 추가 시작
+def querydslDir = "$buildDir/generated/querydsl"
+
+querydsl {
+   jpa = true
+   querydslSourcesDir = querydslDir
+}
+sourceSets {
+   main.java.srcDir querydslDir
+}
+configurations {
+   querydsl.extendsFrom compileClasspath}
+compileQuerydsl {
+   options.annotationProcessorPath = configurations.querydsl
+}
+//querydsl 추가 끝

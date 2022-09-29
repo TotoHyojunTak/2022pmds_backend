@@ -1,10 +1,13 @@
 package com.backend.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -30,5 +33,15 @@ public class UserEntity {
 
     @Column(name = "address")
     private String address;
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private List<UserJobEntity> jobList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private List<UserSchoolEntity> schoolList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private List<UserStatusEntity> statusList = new ArrayList<>();
 }
+
 
