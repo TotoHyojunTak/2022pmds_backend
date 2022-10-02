@@ -46,16 +46,6 @@ management:
   endpoint:
     health:
       show-details: never
-    shutdown:
-      enabled: true
-    caches:
-      enabled: false
-
-info:
-  organization:
-    name: thj0309
-  contact:
-    email: thj0309@hotmail.com
 
 #########################################################
 #### logging
@@ -73,10 +63,3 @@ logging:
     #org.hibernate.type: TRACE
     org.hibernate.type.descriptor.sql: TRACE
     com.zaxxer.hikari: DEBUG
-
-#########################################################
-#### swagger
-#########################################################
-swagger:
-  base:
-    path: com.backend

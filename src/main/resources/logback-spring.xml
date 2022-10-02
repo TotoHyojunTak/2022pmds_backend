@@ -3,7 +3,7 @@
 
     <!-- 변수 지정 -->
     <property name="LOG_PATH" value="./logs"/>
-    <property name="LOG_PATH_NAME" value="${LOG_PATH}/contents-service.log"/>
+    <property name="LOG_PATH_NAME" value="${LOG_PATH}/service.log"/>
 
 
 
@@ -12,7 +12,7 @@
         <file>${LOG_PATH_NAME}</file>
         <!-- 일자별로 로그파일 적용하기 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/contents-service.%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/service.%d{yyyyMMdd}.log</fileNamePattern>
             <maxHistory>60</maxHistory>
         </rollingPolicy>
         <encoder>
