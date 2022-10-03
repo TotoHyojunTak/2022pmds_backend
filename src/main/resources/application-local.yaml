@@ -63,7 +63,6 @@ info:
 logging:
   level:
     root: INFO
-    tving.gaia: DEBUG
     org.springframework: INFO
     org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
     #org.springframework.cloud.sleuth: TRACE
@@ -80,3 +79,12 @@ logging:
 swagger:
   base:
     path: com.backend
+
+
+#########################################################
+#### Encrypt & Decrypt
+#########################################################
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password: A421080gsm
