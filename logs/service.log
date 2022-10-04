@@ -1,0 +1,28 @@
+2022-10-04 13:31:38 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 3384 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 13:31:38 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 13:31:38 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 13:31:41 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 3.949 seconds (JVM running for 4.194)
+2022-10-04 15:04:36 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 18419 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:04:36 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:04:36 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:04:40 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 3.792 seconds (JVM running for 4.015)
+2022-10-04 15:09:03 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 19134 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:09:03 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:09:03 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:09:07 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 3.638 seconds (JVM running for 3.846)
+2022-10-04 15:13:14 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 19798 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:13:14 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:13:14 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:13:17 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 3.561 seconds (JVM running for 3.771)
+2022-10-04 15:20:43 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 21070 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:20:43 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:20:43 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:20:45 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 2.699 seconds (JVM running for 2.918)
+2022-10-04 15:21:44 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 21254 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:21:44 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:21:44 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:21:46 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 2.681 seconds (JVM running for 2.889)
+2022-10-04 15:33:03 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 18.0.1.1 on Totoui-MacBookPro.local with PID 23064 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-04 15:33:03 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.22
+2022-10-04 15:33:03 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-04 15:33:05 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 2.823 seconds (JVM running for 3.075)

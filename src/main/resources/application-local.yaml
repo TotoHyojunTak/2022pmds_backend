@@ -4,6 +4,8 @@ server:
 
 
 spring:
+  application:
+    name: 2022pmds-backend
   main:
     allow-bean-definition-overriding: true
   datasource:
@@ -88,3 +90,18 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
     password: A421080gsm
+
+# -- Default spring configuration
+
+
+
+# -- Eureka client
+eureka:
+  instance:
+    instance-id: backend-msa-instance
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761/eureka/}
