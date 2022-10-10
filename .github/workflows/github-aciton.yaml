@@ -1,5 +1,5 @@
 # github repository Actions 페이지에 나타낼 이름
-name: Dotoriham CI/CD
+name: 2022pmds_backend CI/CD
 
 # event trigger
 on:
@@ -62,16 +62,16 @@ jobs:
 #       if: contains(github.ref, 'main')
 #       run: |
 #           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-#           docker build -f Dockerfile-prod -t ${{ secrets.DOCKER_REPO }}/dotoriham-prod .
-#           docker push ${{ secrets.DOCKER_REPO }}/dotoriham-prod
+#           docker build -f Dockerfile-prod -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
+#           docker push ${{ secrets.DOCKER_REPO }}/2022pmds_backend
           
     ## docker build & push to develop
     - name: Docker build & push to dev
       if: contains(github.ref, 'develop')
       run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_REPO }}/dotoriham-dev .
-          docker push ${{ secrets.DOCKER_REPO }}/dotoriham-dev
+          docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
+          docker push ${{ secrets.DOCKER_REPO }}/2022pmds_backend
           
     ## deploy to production
     #- name: Deploy to prod
@@ -84,7 +84,7 @@ jobs:
 #           password: ${{ secrets.PASSWORD }}
 #           port: 22
 #           script: |
-#               sudo docker pull ${{ secrets.DOCKER_REPO }}/dotoriham-prod
+#               sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend
 #               docker-compose up -d
 #               docker image prune -f
               
@@ -100,7 +100,7 @@ jobs:
         port: 22
         #key: ${{ secrets.PRIVATE_KEY }}
         script: |
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/dotoriham-dev
+            sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend
             docker-compose up -d
             docker image prune -f
             
