@@ -35,22 +35,22 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
           
-    ## create application-prod.properties
-#     - name: create application-prod.properties
+    ## create application-prod.yaml
+#     - name: create application-prod.yaml
 #       if: contains(github.ref, 'main')
 #       run: |
 #           cd ./src/main/resources
-#           touch ./application-prod.properties
-#           echo "${{ secrets.PROPERTIES_PROD }}" > ./application-prod.properties
+#           touch ./application-prod.yaml
+#           echo "${{ secrets.PROPERTIES_PROD }}" > ./application-prod.yaml
 #       shell: bash
 
-    ## create application-dev.properties
-    - name: create application-dev.properties
+    ## create application-dev.yaml
+    - name: create application-dev.yaml
       if: contains(github.ref, 'develop')
       run: |
         cd ./src/main/resources
-        touch ./application-dev.properties
-        echo "${{ secrets.PROPERTIES_DEV }}" > ./application-dev.properties
+        touch ./application-dev.yaml
+        echo "${{ secrets.PROPERTIES_DEV }}" > ./application-dev.yaml
       shell: bash
 
     ## gradle build
