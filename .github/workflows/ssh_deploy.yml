@@ -1,0 +1,42 @@
+# oracle cloud
+# .on.workflow_dispatch 의 내용은 Github Actions 페이지에서 수동으로 재빌드를 할 수 있도록 하는 설정이다. 
+# .on.push 는 master 브랜치에 push 가 발생할 때 아래 jobs 의 내용을 실행한다는 설정이다.
+# .jobs.AUTO_DEPLOY.steps 의 'Run scripts in server' 항목은 appleboy/ssh-action 이라는 미리 작성되어 있는 스크립트를 사용해 원격 서버에 SSH 명령을 보낼 수 있도록 하는 것이다.
+# 이 스크립트를 동작시키기 위해서는 with 에서 각 설정 값들을 입력해 주어야 하는데 민감 정보 (배포 서버 IP, SSH Key 등)는 Github 의 Secrets 에 변수 설정을 하고 이를 불러와서 예시와 같이 등록한다.
+# 출처: https://joycecoder.tistory.com/120
+
+name: deploy
+
+on: 
+  # to build manually 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Person to greet"
+        required: true
+        default: "bossm0n5t3r"
+      home:
+        description: "location"
+        required: false
+        default: "The Octoverse"
+  # to build for every push
+  push:
+    branches:
+      - master
+
+jobs:
+  AUTO_DEPLOY:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run scripts in server
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.SSH_IP }}
+          username: ${{ secrets.SSH_ID }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            date > /home/ubuntu/date
+            echo 1 >> /home/ubuntu/date
