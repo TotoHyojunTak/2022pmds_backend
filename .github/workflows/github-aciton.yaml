@@ -34,14 +34,15 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+          
     ## create application-prod.properties
-    - name: create application-prod.properties
-      if: contains(github.ref, 'main')
-      run: |
-          cd ./src/main/resources
-          touch ./application-prod.properties
-          echo "${{ secrets.PROPERTIES_PROD }}" > ./application-prod.properties
-      shell: bash
+#     - name: create application-prod.properties
+#       if: contains(github.ref, 'main')
+#       run: |
+#           cd ./src/main/resources
+#           touch ./application-prod.properties
+#           echo "${{ secrets.PROPERTIES_PROD }}" > ./application-prod.properties
+#       shell: bash
 
     ## create application-dev.properties
     - name: create application-dev.properties
