@@ -121,16 +121,26 @@ jobs:
         shell: bash
 
   ## slack
+#   action-slack:
+#     needs: CI-CD
+#     runs-on: ubuntu-latest
+#     steps:
+#         - name: Slack Alarm
+#           uses: 8398a7/action-slack@v3
+#           with:
+#               status: ${{ job.status }}
+#               author_name: GitHub-Actions CI/CD
+#               fields: repo,message,commit,author,ref,job,took
+#           env:
+#               SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+#           if: always() # Pick up events even if the job fails or is canceled.
+
+## slack
   action-slack:
-    needs: CI-CD
-    runs-on: ubuntu-latest
-    steps:
-        - name: Slack Alarm
-          uses: 8398a7/action-slack@v3
-          with:
-              status: ${{ job.status }}
-              author_name: GitHub-Actions CI/CD
-              fields: repo,message,commit,author,ref,job,took
-          env:
-              SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
-          if: always() # Pick up events even if the job fails or is canceled.
+      uses: 8398a7/action-slack@v2.6.0
+      with:
+        status: ${{job.status}}
+        author_name: pmds
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
