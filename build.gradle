@@ -7,8 +7,8 @@ buildscript{
 
 
 plugins {
-    id 'org.springframework.boot' version '2.7.3'
-    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+    id 'org.springframework.boot' version '2.6.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'org.springframework.experimental.aot' version '0.12.1'
     id 'org.hibernate.orm'
@@ -16,8 +16,8 @@ plugins {
 }
 
 group = 'com'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+version = '1.0'
+sourceCompatibility = '18'
 
 configurations {
     compileOnly {
