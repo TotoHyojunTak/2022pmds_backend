@@ -1,6 +1,5 @@
 package com.backend.data.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -35,12 +34,15 @@ public class UserEntity {
     private String address;
 
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<UserJobEntity> jobList = new ArrayList<>();
 
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<UserSchoolEntity> schoolList = new ArrayList<>();
 
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<UserStatusEntity> statusList = new ArrayList<>();
 }
 
