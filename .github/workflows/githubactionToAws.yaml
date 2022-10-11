@@ -67,7 +67,7 @@ jobs:
           
     ## docker build & push to develop
     - name: Docker build & push to dev
-      if: contains(github.ref, 'develop')
+      #if: contains(github.ref, 'develop')
       run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
@@ -92,7 +92,7 @@ jobs:
     - name: Deploy to dev
       uses: appleboy/ssh-action@master
       id: deploy-dev
-      if: contains(github.ref, 'develop')
+      #if: contains(github.ref, 'develop')
       with:
         host: ${{ secrets.HOST_DEV }}
         username: ${{ secrets.USERNAME }}
