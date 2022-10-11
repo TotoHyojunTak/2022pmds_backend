@@ -5,9 +5,6 @@ buildscript{
     }
 }
 
-jar {
-    enabled = false
-}
 
 plugins {
     id 'org.springframework.boot' version '2.7.3'
@@ -26,6 +23,11 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+}
+
+
+jar {
+    enabled = false
 }
 
 repositories {
