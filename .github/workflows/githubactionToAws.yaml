@@ -87,8 +87,7 @@ jobs:
 #         cache-from: type=local,src=/tmp/.buildx-cache
 #         cache-to: type=local,dest=/tmp/.buildx-cache-new
       run: 
-        docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
-        docker push ${{ secrets.DOCKER_REPO }}/2022pmds_backend
+        docker buildx build --platform=linux/amd64,linux/arm64 -t ${{secrets.DOCKER_REPO}}/2022pmds_backend:1.0 --push .
         
     - name: DOCKER - Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
