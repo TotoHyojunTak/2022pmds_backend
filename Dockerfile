@@ -1,4 +1,4 @@
-FROM amazoncorretto:18 AS build
+FROM amazoncorretto:11 AS build
 #ARG JAR_FILE=build/libs/*.jar
 #COPY --from=build /libs/*.jar app.jar
 COPY --from=build /app/build/libs/*.jar /app/app.jar

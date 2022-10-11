@@ -17,7 +17,7 @@ plugins {
 
 group = 'com'
 version = '1.0'
-sourceCompatibility = '18'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
