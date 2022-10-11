@@ -1,19 +1,18 @@
 package com.backend.config;
 
-
 import org.assertj.core.api.Assertions;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class TemplateApplicationTests {
 
-    @Test
+@SpringBootTest
+class JasyptConfigTest {
+@Test
     void jasypt(){
-        String url = "jdbc:log4jdbc:mariadb://localhost:3306/2022pmds?characterEncoding=UTF-8";
-        String username = "pmds";
-        String password = "pmds";
+        String url = "jdbc:log4jdbc:mariadb:/:3306/2022pmds";
+        String username = "";
+        String password = "!@";
 
         String encryptUrl = jasyptEncrypt(url);
         String encryptUsername = jasyptEncrypt(username);
@@ -23,7 +22,7 @@ class TemplateApplicationTests {
         System.out.println("encryptUsername : " + encryptUsername);
         System.out.println("encryptPassword : " + encryptPassword);
 
-        Assertions.assertThat(url).isEqualTo(jasyptDecryt(encryptUrl));
+        //Assertions.assertThat(url).isEqualTo(jasyptDecryt(encryptUrl));
     }
 
     private String jasyptEncrypt(String input) {
@@ -41,5 +40,4 @@ class TemplateApplicationTests {
         encryptor.setPassword(key);
         return encryptor.decrypt(input);
     }
-
 }
