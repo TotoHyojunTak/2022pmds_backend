@@ -62,8 +62,8 @@ jobs:
 #       if: contains(github.ref, 'main')
 #       run: |
 #           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-#           docker build -f Dockerfile-prod -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
-#           docker push ${{ secrets.DOCKER_REPO }}/2022pmds_backend
+#           docker build -f Dockerfile-prod -t ${{ secrets.DOCKER_FULL_REPO }} .
+#           docker push ${{ secrets.DOCKER_FULL_REPO }
           
     ## docker build & push to develop
     - name: DOCKER - Set up QEMU
@@ -77,27 +77,27 @@ jobs:
       with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
+           
     - name: DOCKER - Docker build and push to dev
 #       uses: docker/build-push-action@v2
 #       id : docker_build
 #       with:
 #         push: true
-#         tags: ${{ secrets.DOCKERHUB_USERNAME }}/2022pmds_backend:latest
+#         tags: ${{ secrets.DOCKER_FULL_REPO }
 #         cache-from: type=local,src=/tmp/.buildx-cache
 #         cache-to: type=local,dest=/tmp/.buildx-cache-new
       run: 
-        #docker buildx build --platform=linux/amd64,linux/arm64 -t ${{secrets.DOCKER_REPO}}/2022pmds_backend:1.0 --push .
         echo pwd
-        docker build . -t thj0309/2022pmds_backend:1.0
-        docker push thj0309/2022pmds_backend
+        docker build . -t ${{ secrets.DOCKER_FULL_REPO }} 
+        docker push ${{ secrets.DOCKER_FULL_REPO }} 
+        
         
     - name: DOCKER - Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
       
 #           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-#           docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_REPO }}/2022pmds_backend .
-#           docker push ${{ secrets.DOCKER_REPO }}/2022pmds_backend
+#           docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_FULL_REPO }} .
+#           docker push ${{ secrets.DOCKER_FULL_REPO }}
           
     ## deploy to production
     #- name: Deploy to prod
@@ -110,7 +110,7 @@ jobs:
 #           password: ${{ secrets.PASSWORD }}
 #           port: 22
 #           script: |
-#               sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend
+#               sudo docker pull ${{ secrets.DOCKER_FULL_REPO }} 
 #               docker-compose up -d
 #               docker image prune -f
               
@@ -124,10 +124,10 @@ jobs:
         port: ${{ secrets.AWS_HOST_PORT_DEV }}
         script: | #sh deploy.sh
           uptime
-          docker stop backend
-          docker rm backend
-          docker rmi thj0309/2022pmds_backend:1.0
-          docker run -d -p 9999:9999 -e "SPRING_PROFILES_ACTIVE=dev" --name backend thj0309/2022pmds_backend:1.0
+          docker stop ${{ secrets.PROJECT_NAME }}
+          docker rm ${{ secrets.PROJECT_NAME }}
+          docker rmi ${{ secrets.DOCKER_FULL_REPO }}
+          docker run -d -p 9999:9999 -e "SPRING_PROFILES_ACTIVE=dev" --name ${{ secrets.PROJECT_NAME }} ${{ secrets.DOCKER_FULL_REPO }}
 
 #       uses: appleboy/ssh-action@master
 #       id: deploy-dev
@@ -139,7 +139,7 @@ jobs:
 #         port: 22
 #         #key: ${{ secrets.PRIVATE_KEY }}
 #         script: |
-#             sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend:1.0
+#             sudo docker pull ${{ secrets.DOCKER_FULL_REPO }
 #             docker-compose up -d
 #             docker image prune -f
             
