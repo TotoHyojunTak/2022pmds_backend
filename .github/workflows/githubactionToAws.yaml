@@ -124,9 +124,10 @@ jobs:
         port: ${{ secrets.PORT }}
         script: | #sh deploy.sh
           uptime
-          sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend:1.0
-          docker-compose up -d
-          docker image prune -f
+          docker stop backend
+          docker rm backend
+          docker rmi thj0309/2022pmds_backend:1.0
+          docker run -d -p 9999:9999 -e "SPRING_PROFILES_ACTIVE=dev" --name backend thj0309/2022pmds_backend:1.0
 
 #       uses: appleboy/ssh-action@master
 #       id: deploy-dev
