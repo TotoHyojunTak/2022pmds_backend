@@ -117,18 +117,28 @@ jobs:
     ## deploy to develop
     - name: Deploy to dev
       uses: appleboy/ssh-action@master
-      id: deploy-dev
-      #if: contains(github.ref, 'develop')
       with:
-        host: ${{ secrets.HOST_DEV }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-        #key: ${{ secrets.PRIVATE_KEY }}
-        script: |
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend:1.0
-            docker-compose up -d
-            docker image prune -f
+        host: ${{ secrets.AWS_HOST_DEV }}
+        username: ${{ secrets.AWS_USERNAME }}
+        key: ${{ secrets.AWS_PRI_KEY }}
+        script: | #sh deploy.sh
+          sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend:1.0
+          docker-compose up -d
+          docker image prune -f
+
+#       uses: appleboy/ssh-action@master
+#       id: deploy-dev
+#       #if: contains(github.ref, 'develop')
+#       with:
+#         host: ${{ secrets.HOST_DEV }}
+#         username: ${{ secrets.USERNAME }}
+#         password: ${{ secrets.PASSWORD }}
+#         port: 22
+#         #key: ${{ secrets.PRIVATE_KEY }}
+#         script: |
+#             sudo docker pull ${{ secrets.DOCKER_REPO }}/2022pmds_backend:1.0
+#             docker-compose up -d
+#             docker image prune -f
             
   ## time
   current-time:
