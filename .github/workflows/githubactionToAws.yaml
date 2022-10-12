@@ -120,8 +120,8 @@ jobs:
       with:
         host: ${{ secrets.AWS_HOST_DEV }}
         username: ${{ secrets.AWS_USERNAME }}
-        key: 22
-        port: ${{ secrets.PORT }}
+        key: ${{ secrets.AWS_PRI_KEY }}
+        port: ${{ secrets.AWS_HOST_PORT_DEV }}
         script: | #sh deploy.sh
           uptime
           docker stop backend
