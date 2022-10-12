@@ -2,24 +2,23 @@
 server:
   port: 9999
 
-
 spring:
   application:
     name: 2022pmds-backend
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:log4jdbc:mariadb://localhost:3306/2022pmds?characterEncoding=UTF-8
+    url: ENC(13ma2zTXalegMYDkm7mG0O3s53OaPmNHM6PXcJe92p7i/gxMf+rHrXOOQOo+teeZLknm9c9qVZ14PrZ5Mna4Ug==)
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    username: pmds
-    password: pmds
+    username: ENC(x4mx2vNfvCl8LRVLdhD1vnq00h/m2ig/)
+    password: ENC(USXI9gBBura6foVPrDdr2QVLNYSeMsjk)
     hikari:
       connection-timeout: 50000
   jpa:
     generate-ddl: true
     hibernate:
       # create / create-drop / update / validate / none
-      ddl_auto: update
+      ddl_auto: none
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL8Dialect
 #    properties:
@@ -42,9 +41,8 @@ spring:
 management:
   endpoints:
     web:
-      base-path: /health
-      path-mapping:
-        health: _check
+      exposure:
+        include: "*"
   endpoint:
     health:
       show-details: never

@@ -15,12 +15,12 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/v1/user")
+@RequestMapping("/user")
 @Api(value="UserController Swagger", tags = "UserController")
 public class UserController {
 
     private final UserService userService;
-    @GetMapping("/user")
+    @GetMapping("/test")
     public String user(){
         return "backend - user";
     }

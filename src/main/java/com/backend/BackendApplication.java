@@ -26,7 +26,7 @@ public class BackendApplication {
         String encryptUsername = jasyptEncrypt(username);
         String encryptPassword = jasyptEncrypt(password);
 
-        System.out.println("encryptUrl : " + encryptUrl);
+        System.out.println("oci encryptUrl : " + encryptUrl);
         System.out.println("encryptUsername : " + encryptUsername);
         System.out.println("encryptPassword : " + encryptPassword);
     }
