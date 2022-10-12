@@ -120,7 +120,7 @@ jobs:
       with:
         host: ${{ secrets.AWS_HOST_DEV }}
         username: ${{ secrets.AWS_USERNAME }}
-        key: ${{ secrets.AWS_HOST_PORT_DEV }}
+        key: 22
         port: ${{ secrets.PORT }}
         script: | #sh deploy.sh
           uptime
