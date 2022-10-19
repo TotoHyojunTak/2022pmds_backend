@@ -27,8 +27,6 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api(TypeResolver typeResolver) {
-
-
         return new Docket(DocumentationType.SWAGGER_2)
                 .alternateTypeRules(
                         AlternateTypeRules.newRule(typeResolver.resolve(Pageable.class), typeResolver.resolve(Page.class)))
@@ -56,8 +54,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Template API")
-                .description("Template API")
+                .title("User API")
+                .description("User API")
                 .version("1.0")
                 .build();
     }

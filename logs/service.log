@@ -1,13 +1,80 @@
-2022-10-12 10:05:09 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 21009 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
-2022-10-12 10:05:09 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "dev"
-2022-10-12 10:42:35 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 28049 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
-2022-10-12 10:42:35 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "dev"
-2022-10-12 10:42:42 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 7.763 seconds (JVM running for 8.638)
-2022-10-12 10:46:28 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 28786 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
-2022-10-12 10:46:28 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
-2022-10-12 10:46:28 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
-2022-10-12 10:46:35 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 7.944 seconds (JVM running for 8.796)
-2022-10-12 10:49:03 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 29204 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
-2022-10-12 10:49:03 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
-2022-10-12 10:49:03 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
-2022-10-12 10:49:10 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 7.707 seconds (JVM running for 8.543)
+2022-10-19 09:32:17 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 41737 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:32:17 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:32:17 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:32:25 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 9.21 seconds (JVM running for 10.266)
+2022-10-19 09:40:51 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 43286 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:40:51 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:40:51 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:40:57 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 7.655 seconds (JVM running for 8.691)
+2022-10-19 09:44:17 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 43896 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:44:17 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:44:17 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:44:25 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.458 seconds (JVM running for 9.297)
+2022-10-19 09:50:17 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 44982 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:50:17 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:50:17 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:50:27 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 10.757 seconds (JVM running for 11.902)
+2022-10-19 09:52:14 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 45338 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:52:14 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:52:14 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:52:21 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.879 seconds (JVM running for 10.579)
+2022-10-19 09:57:02 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 46245 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 09:57:02 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 09:57:02 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 09:57:11 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 10.006 seconds (JVM running for 10.958)
+2022-10-19 10:07:50 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 48175 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 10:07:50 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 10:07:50 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 10:07:57 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.574 seconds (JVM running for 9.517)
+2022-10-19 10:11:27 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 48858 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 10:11:27 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 10:11:27 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 10:11:35 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.816 seconds (JVM running for 9.742)
+2022-10-19 10:25:07 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 51342 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 10:25:07 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 10:25:07 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 10:25:15 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.808 seconds (JVM running for 9.725)
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] ---> GET http://2022pmds-backend-order/order/64b627f0-b960-4b84-bd4d-76e7a72fbbe1/orders HTTP/1.1
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] ---> END HTTP (0-byte body)
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] <--- HTTP/1.1 404 (327ms)
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] connection: keep-alive
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] content-type: application/json
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] date: Wed, 19 Oct 2022 01:27:00 GMT
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] keep-alive: timeout=60
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] transfer-encoding: chunked
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Access-Control-Request-Headers
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Access-Control-Request-Method
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Origin
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] 
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] {"timestamp":"2022-10-19T01:27:00.529+00:00","status":404,"error":"Not Found","message":"No message available","path":"/order/64b627f0-b960-4b84-bd4d-76e7a72fbbe1/orders"}
+2022-10-19 10:27:00 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] <--- END HTTP (171-byte body)
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] ---> GET http://2022pmds-backend-order/order/64b627f0-b960-4b84-bd4d-76e7a72fbbe1/orders HTTP/1.1
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] ---> END HTTP (0-byte body)
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] <--- HTTP/1.1 404 (14ms)
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] connection: keep-alive
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] content-type: application/json
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] date: Wed, 19 Oct 2022 01:27:55 GMT
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] keep-alive: timeout=60
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] transfer-encoding: chunked
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Access-Control-Request-Headers
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Access-Control-Request-Method
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] vary: Origin
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] 
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] {"timestamp":"2022-10-19T01:27:55.151+00:00","status":404,"error":"Not Found","message":"No message available","path":"/order/64b627f0-b960-4b84-bd4d-76e7a72fbbe1/orders"}
+2022-10-19 10:27:55 [DEBUG] [Slf4jLogger.java]log(72) : [OrderServiceClient#getOrders] <--- END HTTP (171-byte body)
+2022-10-19 11:04:04 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 58234 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 11:04:04 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 11:04:04 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 11:04:13 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 9.552 seconds (JVM running for 10.484)
+2022-10-19 15:07:48 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 15697 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 15:07:48 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 15:07:48 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 15:07:56 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.326 seconds (JVM running for 9.272)
+2022-10-19 15:11:55 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 16357 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 15:11:55 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 15:11:55 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 15:12:03 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.41 seconds (JVM running for 9.292)
+2022-10-19 15:21:20 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on Totoui-MacBookPro.local with PID 17913 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 15:21:20 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 15:21:20 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 15:21:30 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 10.504 seconds (JVM running for 11.938)

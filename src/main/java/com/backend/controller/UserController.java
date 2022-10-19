@@ -1,17 +1,19 @@
 package com.backend.controller;
 
+import com.backend.data.dto.request.UserReqDTO;
 import com.backend.data.dto.response.UserDTO;
-import com.backend.data.entity.UserEntity;
 import com.backend.service.UserService;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.core.env.Environment;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -20,18 +22,48 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
-    @GetMapping("/test")
-    public String user(){
-        return "backend - user";
+    private Environment env;
+    @GetMapping("/health_check")
+    public String status(){
+        return String.format("It's working in User Service on PORT %s", env.getProperty("local.server.port")
+                + ", port(local.server.port) = " + env.getProperty("local.server.port")
+                + ", port(server.port) = " + env.getProperty("server.port")
+                + ", token secret = " + env.getProperty("token.secret")
+                + ", token expiration time = " + env.getProperty("token.expiration_time")
+        );
     }
 
-    @GetMapping("/list")
-    public List<UserDTO> getList(){
-        return userService.getList();
+    @PostMapping("/users")
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserReqDTO user){
+        UserDTO result = userService.createUser(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
-    @GetMapping("/list/{userId}")
-    public Optional<UserEntity> getListByUserId(@PathVariable String userId){
-        return userService.getListByUserId(userId);
+    @GetMapping("/users")
+    public ResponseEntity<List<UserDTO>> getUsers(){
+        return ResponseEntity.status(HttpStatus.OK).body(userService.getUserByAll());
+    }
+
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<UserDTO> getUser(@PathVariable String userId){
+        return ResponseEntity.status(HttpStatus.OK).body(userService.getUserByUserId(userId));
+    }
+
+    @GetMapping("/feign/list")
+    public ResponseEntity<List<Map<String, String>>> getUserListForFeign(){
+        List<Map<String, String>> returnValue = new ArrayList<>();
+
+        List<UserDTO> result = userService.getUserByAll();
+        result.forEach(e->{
+
+            Map<String, String> temp = new HashMap<>();
+            temp.put("email", e.getEmail());
+            temp.put("name", e.getName());
+            temp.put("userId", e.getUserId());
+
+            returnValue.add(temp);
+        });
+
+        return ResponseEntity.status(HttpStatus.OK).body(returnValue);
     }
 }

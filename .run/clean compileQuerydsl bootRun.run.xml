@@ -16,7 +16,7 @@
       <option name="taskNames">
         <list>
           <option value="clean" />
-          <option value="compileQuerydsl" />
+          <option value="compileQuerydslJava" />
           <option value="bootRun" />
         </list>
       </option>

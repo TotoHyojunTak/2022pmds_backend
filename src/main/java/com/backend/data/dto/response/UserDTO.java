@@ -1,20 +1,21 @@
 package com.backend.data.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
 
-@Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.Date;
+import java.util.List;
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDTO {
-    private String userId;
-    private String userNm;
-    private String contactNumber;
     private String email;
-    private String address;
-    private String jobCode;
-    private String ingYn;
+    private String name;
+    private String pwd;
+    private String userId;
+    private Date createdAt;
+
+    private String encryptedPwd;
+
+    private List<OrderDTO> orders;
 }

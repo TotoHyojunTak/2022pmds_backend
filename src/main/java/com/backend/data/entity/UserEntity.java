@@ -2,48 +2,34 @@ package com.backend.data.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.Hibernate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
-@Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
-@Entity
-@Table(name = "tb_user")
 @EntityListeners(AuditingEntityListener.class)
+@Getter @Setter
+@ToString
+@Entity
+@Table(name = "TB_USERS")
 public class UserEntity {
     @Id
-    @Column(name = "user_id")
-    private String userId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
 
-    @Column(name = "user_nm")
-    private String userNm;
-
-    @Column(name = "contact_number")
-    private String contactNumber;
-
-    @Column(name = "email")
+    @Column(nullable = false, length = 50, unique = true)
     private String email;
+    @Column(nullable = false, length = 50)
+    private String name;
+    @Column(nullable = false, unique = true)
+    private String userId;
+    @Column(nullable = false, unique = true)
+    private String encryptedPwd;
 
-    @Column(name = "address")
-    private String address;
 
-    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
-    @Builder.Default
-    private List<UserJobEntity> jobList = new ArrayList<>();
-
-    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
-    @Builder.Default
-    private List<UserSchoolEntity> schoolList = new ArrayList<>();
-
-    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
-    @Builder.Default
-    private List<UserStatusEntity> statusList = new ArrayList<>();
 }
-
-
