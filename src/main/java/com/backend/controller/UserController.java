@@ -3,7 +3,6 @@ package com.backend.controller;
 import com.backend.data.dto.request.UserReqDTO;
 import com.backend.data.dto.response.UserDTO;
 import com.backend.service.UserService;
-import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,6 @@ import java.util.Map;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/user")
-@Api(value="UserController Swagger", tags = "UserController")
 public class UserController {
 
     private final UserService userService;

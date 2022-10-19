@@ -78,3 +78,12 @@
 2022-10-19 15:21:20 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
 2022-10-19 15:21:20 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
 2022-10-19 15:21:30 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 10.504 seconds (JVM running for 11.938)
+2022-10-19 19:58:25 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on TotouiMcBookPro with PID 69448 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 19:58:25 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "dev"
+2022-10-19 20:01:02 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on TotouiMcBookPro with PID 69895 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 20:01:02 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "dev"
+2022-10-19 20:01:09 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 7.741 seconds (JVM running for 9.162)
+2022-10-19 20:08:35 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 11.0.16.1 on TotouiMcBookPro with PID 71115 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/classes/java/main started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend)
+2022-10-19 20:08:35 [DEBUG] [StartupInfoLogger.java]logStarting(56) : Running with Spring Boot, Spring v5.3.21
+2022-10-19 20:08:35 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "local"
+2022-10-19 20:08:42 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 8.334 seconds (JVM running for 9.295)
