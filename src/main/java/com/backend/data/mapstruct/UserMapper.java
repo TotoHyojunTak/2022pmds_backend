@@ -14,14 +14,11 @@ import java.util.List;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    @Mapping(target="orders", ignore=true)
+    @Mapping(target="pwd", ignore=true)
     UserDTO toDto(UserEntity entity);
 
 
 
-    @Mapping(target="id", ignore=true)
-    @Mapping(target="userId", ignore=true)
-    @Mapping(target="encryptedPwd", ignore=true)
     UserEntity toEntity(UserReqDTO dto);
 
 

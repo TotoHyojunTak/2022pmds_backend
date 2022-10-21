@@ -35,18 +35,18 @@ spring:
 #########################################################
 #### Actuator
 #########################################################
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    health:
-#      show-details: never
-#    shutdown:
-#      enabled: true
-#    caches:
-#      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: never
+    shutdown:
+      enabled: true
+    caches:
+      enabled: false
 
 info:
   organization:
@@ -70,12 +70,6 @@ logging:
     org.hibernate.type.descriptor.sql: TRACE
     com.zaxxer.hikari: DEBUG
 
-#########################################################
-#### swagger
-#########################################################
-swagger:
-  base:
-    path: com.backend
 
 
 #########################################################
