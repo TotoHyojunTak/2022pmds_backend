@@ -32,23 +32,8 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        #show_sql: true
         format_sql: true
     defer-datasource-initialization: true
-#    properties:
-#      hibernate:
-#        validator:
-#          apply_to_ddl: true
-#        format_sql: true
-#        default_batch_fetch_size: 1000
-#        cache:
-#          use_second_level_cache: true
-#          region:
-#            factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
-#        javax:
-#          persistence:
-#            sharedCache:
-#              mode: ENABLE_SELECTIVE
 #########################################################
 #### Actuator
 #########################################################
@@ -56,7 +41,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: '*'
   endpoint:
     health:
       show-details: never
