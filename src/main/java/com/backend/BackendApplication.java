@@ -41,7 +41,7 @@ public class BackendApplication {
         System.out.println("user encryptUsername : " + encryptUsername);
         System.out.println("user encryptPassword : " + encryptPassword);
 
-        url = "jdbc:log4jdbc:mariadb://146.56.114.57:3306/order_app";
+        url = "jdbc:log4jdbc:mariadb://146.56.114.57:3306/order";
         username = "order";
         password = "order1234!@#$";
 
