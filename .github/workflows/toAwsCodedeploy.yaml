@@ -30,7 +30,7 @@ jobs:
         with:
           files: ${{ env.RESOURCE_PATH }} 
         env:
-          override.value: 'from deploy.yaml' <-- 이렇게 사용해도 주입이 된다.
+          override.value: 'from deploy.yaml'
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
