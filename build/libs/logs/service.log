@@ -1,3 +1,0 @@
-2022-10-21 13:30:32 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BackendApplication using Java 19 on TotouiMcBookPro with PID 10343 (/Volumes/THJ-DATA/git/2022-PMDS/backend/build/libs/backend-1.0.jar started by totohyojuntak in /Volumes/THJ-DATA/git/2022-PMDS/backend/build/libs)
-2022-10-21 13:30:32 [INFO ] [SpringApplication.java]logStartupProfileInfo(640) : The following 1 profile is active: "dev"
-2022-10-21 13:30:51 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BackendApplication in 21.085 seconds (JVM running for 22.443)
