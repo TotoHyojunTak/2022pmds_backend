@@ -1,39 +1,44 @@
 package com.backend.exception;
 
-import feign.codec.ErrorDecoder;
-
 import feign.Response;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
+import feign.RetryableException;
+import feign.Retryer;
+import feign.codec.ErrorDecoder;
+import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang.time.DateUtils;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Date;
 
 @Component
+@RequiredArgsConstructor
 public class FeignErrorDecoder implements ErrorDecoder {
-    Environment env;
 
-    @Autowired
-    public FeignErrorDecoder(Environment env) {
-        this.env = env;
-    }
+    private final ErrorDecoder errorDecoder = new ErrorDecoder.Default();
+
 
     @Override
     public Exception decode(String methodKey, Response response) {
-        switch(response.status()) {
-            case 400:
-                break;
-            case 404:
-                if (methodKey.contains("getOrders")) {
-                    return new ResponseStatusException(HttpStatus.valueOf(response.status()),
-                            env.getProperty("order_service.exception.orders_is_empty")
-                    );
-                }
-                break;
-            default:
-                return new Exception(response.reason());
-        }
+        final HttpStatus httpStatus = HttpStatus.resolve(response.status());
+        System.out.println("httpStatus : {}, request: {}" + httpStatus + response.request().toString());
 
-        return null;
+        // 429 too many request 300ms 이후 재시도
+        if (httpStatus == HttpStatus.TOO_MANY_REQUESTS) {
+            return new RetryableException(
+                    response.status(),
+                    "retry!!! (too many request)",
+                    response.request().httpMethod(),
+                    DateUtils.addMilliseconds(new Date(), 300),
+                    response.request()
+            );
+        }
+        return errorDecoder.decode(methodKey, response);
+    }
+
+    @Bean
+    public Retryer retryer(){
+        return new Retryer.Default();
     }
 }
